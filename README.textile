@@ -1,0 +1,22 @@
+h2. update-license.rb
+
+This is a script which updates GPL licenses with the current data in source files.
+
+For example:
+
+<pre>
+/*
+Copyright (c) 2007-2008 Michael Specht
+
+This file is part of GPF.
+
+GPF is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+...
+</pre>
+
+Something like the snippet above should probably be updated every year to reflect the current year. This script automates this task.
+

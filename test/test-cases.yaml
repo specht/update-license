@@ -1,0 +1,44 @@
+# # style comments first
+
+# everything nice
+- :filename: test.rb
+  :content: "# A\n# B\n\nrequire 'yaml'\n"
+  :result: "# A\n# B\n\n"
+# code before first comment
+- :filename: test.rb
+  :content: "require 'yaml'\n\n# late comment\n"
+  :result: ""
+# whitespace before first comment
+- :filename: test.rb
+  :content: "\n    # somethin, uh\n\n\nrequire 'yaml'"
+  :result: "\n    # somethin, uh\n\n\n"
+
+# // style comments now
+
+# everything nice
+- :filename: test.cpp
+  :content: "// A\n// B\n\n#include <stdio.h>\n"
+  :result: "// A\n// B\n\n"
+# code before first comment
+- :filename: test.cpp
+  :content: "#include <stdio.h>\n\n// late comment\n"
+  :result: ""
+# whitespace before first comment
+- :filename: test.cpp
+  :content: "\n    // somethin, uh\n\n\n#include <stdio.h>"
+  :result: "\n    // somethin, uh\n\n\n"
+
+# /* ... */ style comments now
+
+# everything nice
+- :filename: test.cpp
+  :content: "/* A\n  B\n*/\n\n#include <stdio.h>\n"
+  :result: "/* A\n  B\n*/\n\n"
+# code before first comment
+- :filename: test.cpp
+  :content: "#include <stdio.h>\n\n/* A\n  B\n*/\n"
+  :result: ""
+# whitespace before first comment
+- :filename: test.cpp
+  :content: "\n    \t/* A\n  B\n*/\n\n#include <stdio.h>\n"
+  :result: "\n    \t/* A\n  B\n*/\n\n"

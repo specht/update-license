@@ -1,6 +1,6 @@
 h2. update-license.rb
 
-This is a script which updates GPL licenses with the current data in source files.
+This is a script which updates GPL licenses with the current year in source files.
 
 For example:
 
